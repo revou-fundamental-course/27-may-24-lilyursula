@@ -4,8 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lily Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="js/script.js">
 </head>
+
 <body>
+    <nav> 
+        <div class="logo-icon"></div>
+        <section>
+            <a class="nav-item" href="#home">Home</a>
+            <a class="nav-item" href="#facilities">Our Facilities</a>
+            <a class="nav-item" href="#message-us">Message Us</a>
+        </section>
+    </nav>
+
+    <hr>
     
+    <section>
+        <!-- Home -->
+        <section id ="home">
+           <header> 
+            <h1>Hi <span id="nama">Nama</span>, Welcome To Lily Portfolio!</h1>
+            <button id="tombol">Replace Name</button>
+             </header> 
+        </section>
+
+        <section>
+           <article>
+            <p> almost 2 years experience in Software Development Application scope.
+                Start my career as a backend junior at Game Industry on 2022 and recently implement API Integration
+                at financial industry under IT Service Consultant company. Deep knowledge about API (SOAP and REST API),
+                implement API Gateway and also B2Bi implementation message-us-sectionenterprise tools : Axway.
+            </p>
+
+            <div class="banner-container">
+                
+            </div>
+           </article>
+            
+        </section>
+
+        <hr> 
+
+        <!-- Skills -->
+        <section id ="facilities">
+            <header>
+                <h1> Programming</h1> 
+            </header>
+
+            <article class="facility-list">
+                <div>
+                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <h5>C#</h5>
+                </div>
+                <div>
+                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <h5>Java</h5>
+                </div>
+                <div>
+                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <h5>PHP</h5>
+                </div>
+                <div>
+                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <h5>Javascript</h5>
+                </div>
+                <div>
+                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <h5>CSS</h5>
+                </div>
+                
+            </article>
+            <header>
+                <h1> Backend</h1> 
+            </header>
+
+            <article class="facility-list">
+                <div>
+                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <h5>System Test</h5>
+                </div>
+                <div>
+                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <h5>REST API</h5>
+                </div>
+                <div>
+                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <h5>API Security</h5>
+                </div>
+                <div>
+                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <h5>Integration</h5>
+                </div>
+                <div>
+                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <h5>Postman</h5>
+                </div>
+            </article>
+
+        
+        <hr>
+
+        <!-- Message Us -->
+        <section id ="message-us">
+            <header>
+                <h1> Message Us</h1> 
+            </header>
+
+            <section class="message-us-section">
+                <!-- Form -->
+                <section>
+                    <form name="message-form" onsubmit="return validateForm()">
+                        <label>Name :</label>
+                        <input type="text" placeholder="Nama Anda" id="name-input">
+                        <button id="kirim"> Submit </button>
+                        <p id="error-name"></p>
+                    </form>
+                    
+                </section>
+
+                <!-- Result -->
+                <section class="result-container">
+                    <div class="form-result">
+
+                    </div>
+                </section>
+            </section>
+        </section>
+    </section>
+
+
+    <script src="js/script.js"></script>
+
+    <footer>
+
+    </footer>
+
 </body>
 </html>
