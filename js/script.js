@@ -30,28 +30,24 @@ document.getElementById('tombol').addEventListener("click", function(){
 
 function validateForm() {
     const namaa = document.forms['message-form']['name-input'].value
-    const pesann = document.forms['message-form']['pesan-input'].value;
+    const pesann = document.forms['message-form']['pesan-input'].value
 
     if (namaa == '' || pesann == '') {
         document.getElementById('error').innerHTML = 'Harus di isi!';
         return false;
     }
 
-    setName(namaa)
+    setResult(namaa, pesann)
     // setPesan(pesann);
 
     return false;
 }
 
-function setName(namaa) {
+function setResult(namaa, pesann) {
     document.getElementById('nama').innerHTML = namaa;
     document.getElementById('nama-result').innerHTML = namaa;
-    document.getElementById('error').innerHTML = '';
-}
-
-function setPesan(pesann) {
-    document.getElementById('pesan').innerHTML = pesann;
     document.getElementById('pesan-result').innerHTML = pesann;
+    document.getElementById('error').innerHTML = '';
 }
 
 
