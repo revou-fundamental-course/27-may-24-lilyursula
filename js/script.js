@@ -7,46 +7,28 @@ document.getElementById('tombol').addEventListener("click", function(){
     replaceName()
 })
 
-
 //
-
-
-// let nameInput = document.getElementById('name-input')
-// document.getElementById('kirim').addEventListener("click", function()
-// {
-//     const namaa = nameInput.value
-
-//     if (nama == "")
-//         {
-//             document.getElementById("error-name").innerHTML = "Nama harus diisi!"
-//         }
-
-//     else
-//         {
-//             document.getElementById('nama').innerHTML = namaa
-//         }
-// })  
-
 
 function validateForm() {
     const namaa = document.forms['message-form']['name-input'].value
     const pesann = document.forms['message-form']['pesan-input'].value
+    const datetimelocal = document.forms['message-form']['datetimelocal-input'].value
 
     if (namaa == '' || pesann == '') {
         document.getElementById('error').innerHTML = 'Harus di isi!';
         return false;
     }
 
-    setResult(namaa, pesann)
-    // setPesan(pesann);
+    setResult(namaa, pesann, datetimelocal)
 
     return false;
 }
 
-function setResult(namaa, pesann) {
+function setResult(namaa, pesann, datetimelocal) {
     document.getElementById('nama').innerHTML = namaa;
     document.getElementById('nama-result').innerHTML = namaa;
     document.getElementById('pesan-result').innerHTML = pesann;
+    // document.getElementById('datetimelocal-result').innerHTML = datetimelocal;
     document.getElementById('error').innerHTML = '';
 }
 
