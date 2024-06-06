@@ -53,3 +53,15 @@ function setPesan(pesann) {
     document.getElementById('pesan').innerHTML = pesann;
     document.getElementById('pesan-result').innerHTML = pesann;
 }
+
+
+function tampilkanTanggal() {
+    const tanggalSekarang = new Date();
+    const tanggalFormatted = tanggalSekarang.toLocaleDateString('id-ID', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    document.getElementById('tanggal').textContent = tanggalFormatted;
+}
