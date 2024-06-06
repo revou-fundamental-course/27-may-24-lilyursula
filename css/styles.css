@@ -1,9 +1,11 @@
 /* ini css */
+body {
+    font-family: Arial, sans-serif;
+}
 
 nav{
     display: flex;
     justify-content: space-between;
-    background-color:rgb(252, 249, 228);
 }
 
 nav>section{
@@ -37,6 +39,7 @@ nav>section{
 .banner-container{
     height: 258px;
     border: 1px solid black;
+    background-image: url(https://picsum.photos/500);
 }
 
 .facility-list{
@@ -44,8 +47,20 @@ nav>section{
     justify-content: space-around;
 }
 
+.skill-list{
+    display: flex;
+    justify-content: space-around;
+    background-image: url(https://picsum.photos/100);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .form-result{
-    height: 100px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 190px;
     border: 1px solid black;
 }
 

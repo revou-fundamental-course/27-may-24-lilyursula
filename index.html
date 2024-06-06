@@ -12,9 +12,9 @@
     <nav> 
         <div class="logo-icon"></div>
         <section>
-            <a class="nav-item" href="#home">Home</a>
-            <a class="nav-item" href="#facilities">Our Facilities</a>
-            <a class="nav-item" href="#message-us">Message Us</a>
+            <a class="nav-item" href="#about">About Me</a>
+            <a class="nav-item" href="#skills">Skills</a>
+            <a class="nav-item" href="#contact">Contact Me</a>
         </section>
     </nav>
 
@@ -24,7 +24,7 @@
         <!-- Home -->
         <section id ="home">
            <header> 
-            <h1>Hi <span id="nama">Nama</span>, Welcome To Lily Portfolio!</h1>
+            <h1>Hi <span id="about">Nama</span>, Welcome To Lily Portfolio!</h1>
             <button id="tombol">Replace Name</button>
              </header> 
         </section>
@@ -38,7 +38,7 @@
             </p>
 
             <div class="banner-container">
-                
+            
             </div>
            </article>
             
@@ -47,30 +47,30 @@
         <hr> 
 
         <!-- Skills -->
-        <section id ="facilities">
+        <section id ="skills">
             <header>
                 <h1> Programming</h1> 
             </header>
 
             <article class="facility-list">
                 <div>
-                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <div class="skill-list" style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
                     <h5>C#</h5>
                 </div>
                 <div>
-                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <div class="skill-list" style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
                     <h5>Java</h5>
                 </div>
                 <div>
-                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <div class="skill-list" style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
                     <h5>PHP</h5>
                 </div>
                 <div>
-                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <div class="skill-list" style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
                     <h5>Javascript</h5>
                 </div>
                 <div>
-                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <div class="skill-list" style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
                     <h5>CSS</h5>
                 </div>
                 
@@ -81,23 +81,23 @@
 
             <article class="facility-list">
                 <div>
-                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <div class="skill-list" style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
                     <h5>System Test</h5>
                 </div>
                 <div>
-                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <div class="skill-list" style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
                     <h5>REST API</h5>
                 </div>
                 <div>
-                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <div class="skill-list" style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
                     <h5>API Security</h5>
                 </div>
                 <div>
-                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <div class="skill-list" style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
                     <h5>Integration</h5>
                 </div>
                 <div>
-                    <div style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
+                    <div class="skill-list" style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid black;"></div>
                     <h5>Postman</h5>
                 </div>
             </article>
@@ -106,7 +106,7 @@
         <hr>
 
         <!-- Message Us -->
-        <section id ="message-us">
+        <section id ="contact">
             <header>
                 <h1> Message Us</h1> 
             </header>
@@ -115,10 +115,28 @@
                 <!-- Form -->
                 <section>
                     <form name="message-form" onsubmit="return validateForm()">
+
+                        <p></p>
                         <label>Name :</label>
                         <input type="text" placeholder="Nama Anda" id="name-input">
+
+                        <p></p>
+                        <label>Tgl Lahir :</label>
+                        <input type="datetime-local" id="datetimelocal-input"/><br><br>
+
+                        <p></p>
+                        <label>Jenis Kelamin :</label> <br>
+                        <input type="radio" id="M"> Male
+                        <input type="radio" id="F"> Female
+
+                        <p></p>
+                        <label>Pesan :</label>
+                        <input type="text" placeholder="Pesan" id="pesan-input">
+
+                        <p></p>
                         <button id="kirim"> Submit </button>
-                        <p id="error-name"></p>
+
+                        <p id="error"></p>
                     </form>
                     
                 </section>
@@ -126,6 +144,12 @@
                 <!-- Result -->
                 <section class="result-container">
                     <div class="form-result">
+                        
+                        <p> Current Time </p> 
+                        <h5>Nama Anda :             <span id="nama-result"></span> </h5>
+                        <h5>Tanggal Lahir Anda :    <span id="tanggallahir-result"></span> </h5>
+                        <h5>Jenis Kelamin Anda :    <span id="jeniskelamin-result"></span> </h5>
+                        <h5>Pesan Anda :            <span id="pesan-result"></span> </h5>
 
                     </div>
                 </section>
